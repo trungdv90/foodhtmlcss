@@ -10,6 +10,7 @@ img {
 /* .wapper {
     display: grid;
     -ms-grid-column-align: 20px;
+-ms-grid-column-align: 20px;
 } */
 .menu ul {
     display: grid;
