@@ -1,0 +1,170 @@
+.button_menu {
+    padding: 10px 10px;
+    border: 0;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: inline-block;
+
+    box-shadow: 0 0 20px #eee;
+    transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.button_menu:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+/* img {
+    max-width: 100%;
+} */
+/* .wapper {
+    display: grid;
+    -ms-grid-column-align: 20px;
+-ms-grid-column-align: 20px;
+alfalsfjefl
+} */
+.btn-grad {
+    background-image: linear-gradient(to right, #3ca55c 0%, #b5ac49 51%, #3ca55c 100%);
+}
+.btn-gradyellow {
+    background-image: linear-gradient(to right, #f09819 0%, #edde5d 51%, #f09819 100%);
+}
+
+.btn-gradblue {
+    background-image: linear-gradient(to right, #1fa2ff 0%, #12d8fa 51%, #1fa2ff 100%);
+}
+.btn-gradwhite {
+    background-image: linear-gradient(to right, #ffeeee 0%, #ddefbb 51%, #ffeeee 100%);
+}
+.btn-gradgreen {
+    background-image: linear-gradient(to right, #ede574 0%, #e1f5c4 51%, #ede574 100%);
+}
+
+.btn-gradgreen:hover,
+.btn-grad:hover,
+.btn-gradyellow:hover,
+.btn-gradwhite:hover,
+.btn-gradblue:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    transition: 1s;
+    /* background: white; */
+}
+
+.menu ul {
+    display: grid;
+    grid-gap: 10px 10px;
+    padding: 0;
+    list-style: none;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.menu a {
+    /* background: var(--yellow); */
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.top {
+    display: grid;
+    grid-template-areas:
+        "hero hero cta1"
+        "hero hero cta2";
+    grid-gap: 20px;
+}
+.hero {
+    grid-area: hero;
+    min-height: 400px;
+    background: white url(https://jolly-kalam-23776e.netlify.app/restaurantwebsite/images/taco.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.hero > * {
+    /* background: var(--yellow); */
+    padding: 5px;
+}
+
+.cta {
+    /* background: var(--yellow); */
+    display: grid;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+.cta p {
+    margin: 0;
+}
+.cta1 {
+    grid-area: cta1;
+}
+.cta2 {
+    grid-area: cta2;
+}
+.price {
+    font-size: 60px;
+    font-weight: 300;
+}
+.features {
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.feature {
+    /* background: white; */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(168, 51, 51);
+}
+.feature .icon {
+    font-size: 55px;
+}
+.feature p {
+    color: rgba(14, 85, 226, 0.5);
+}
+.about {
+    /* background: white; */
+    margin: 20px 0;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* vertical */
+    align-items: center;
+}
+.about__mockup {
+    margin: 0 auto;
+}
+
+.gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery h2 {
+    /* lay ca cot , diem từ cuối hàng lên*/
+    grid-column: 1/ -1;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    /* dọc */
+    align-items: center;
+}
+.gallery h2::before,
+.gallery h2::after {
+    display: block;
+    content: "";
+    height: 10px;
+    background: linear-gradient(to var(--direction, left), var(--yellow), transparent);
+}
+.gallery h2::after {
+    --direction: right;
+}
